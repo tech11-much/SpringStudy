@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--有参构造创建对象，下标赋值-->
+    <!--<bean id="user" class="com.yang.pojo.User">
+        <constructor-arg index="0" value="yanghehcuan"/>
+        &lt;!&ndash;无参构造创建对象，属性赋值&ndash;&gt;
+        &lt;!&ndash;<property name="name" value="yanghechuan"/>&ndash;&gt;
+    </bean>-->
+    <!--类型匹配有参构造对象-->
+    <!--<bean id="user" class="com.yang.pojo.User">
+        <constructor-arg type="java.lang.String" value="yanghehcuan"/>
+        &lt;!&ndash;无参构造创建对象，属性赋值&ndash;&gt;
+        &lt;!&ndash;<property name="name" value="yanghechuan"/>&ndash;&gt;
+    </bean>-->
+    <!--第三种：直接通过参数名来创建-->
+    <bean id="user" class="com.yang.pojo.User">
+<!--        <constructor-arg name = "name" value="yanghehcuan"/>-->
+        <!--无参构造创建对象，属性赋值-->
+        <property name="name" value="yanghechuahhhn"/>
+    </bean>
+    <!--name也是别名，可以起多个别名-->
+    <bean id="userT" class="com.yang.pojo.UserT" name="userT2,u2">
+        <property name="name" value="yang"/>
+    </bean>
+    <!--通过配置别名我们也可以获取到对象-->
+    <alias name="user" alias="user2"/>
+
+</beans>

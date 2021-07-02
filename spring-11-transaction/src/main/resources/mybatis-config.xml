@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--核心配置文件-->
+<configuration>
+    <!--环境转换设置-->
+    <!--在xml中，所有的标签都可以设置顺序，properties放在第一位-->
+    <!--引入外部配置文件，优先使用外部文件的配置-->
+    <!--<properties resource="db.properties">
+        <property name="pwd" value="111111"/>
+    </properties>-->
+    <settings>
+        <!--默认的日志输出-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!--<setting name="logImpl" value="LOG4J"/>-->
+    </settings>
+    <typeAliases>
+        <!--实体类比较少的情况下使用别名配置-->
+        <!--<typeAlias type="com.yang.pojo.User" alias="User"></typeAlias>-->
+
+        <!--实体类较多的情况下使用这种包名的配置-->
+        <package name="com.yang.pojo"/>
+    </typeAliases>
+</configuration>
